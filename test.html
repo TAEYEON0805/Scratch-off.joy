@@ -44,12 +44,12 @@
 		var img2 = new Image();
 		img2.src = 'img/1.jpg';
 		img2.onload = function(){
-		ctx1.drawImage(this,0,0)
+			ctx1.drawImage(this,0,0)
 		}
 		
 		// 監聽canvas的onmousedown事件
-		c1.ontouchstart = function(ev){ // 原本是onmousedown 
-		c1.ontouchmove = function(e){  // 原本是onmousemove 
+		c1.onmousedown = function(ev){
+		c1.onmousemove = function(e){
 			console.log(e);
 			var w = 50;			// 清除筆刷的寬度
 			var h = 50;			// 清除筆刷的高度
